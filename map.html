@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="董书华">
+    <title>map</title>
+</head>
+
+<body>
+    <script>
+        var books = [
+            {id:1, name:'name1',price:10, amount:100},
+            {id:2, name:'name2',price:12, amount:101},
+            {id:3, name:'name3',price:13, amount:102},
+        ]
+
+        // books = books.map(function(b){
+        //     var book = {
+        //         n: b.name,
+        //         p: b.price
+        //     }
+        //     return book;
+        // })
+        // console.log(books)
+
+        var newArr = [];
+        for (var b in books) {
+            var current = books[b];
+            var newBook = {
+                n: current.name,
+                p: current.price
+            }
+            newArr.push(newBook);
+        }
+        console.log(newArr);
+    </script>
+</body>
+
+</html>
